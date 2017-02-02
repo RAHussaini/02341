@@ -1,0 +1,84 @@
+package dk.dtu.compute.se.mdsu.tutorial1.simulator;
+
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+import org.eclipse.core.commands.AbstractHandler;
+import org.eclipse.core.commands.ExecutionEvent;
+import org.eclipse.core.commands.ExecutionException;
+import org.eclipse.core.expressions.IEvaluationContext;
+
+// TODO replace these imports by your own classes (which
+//      you generated from your model
+import dk.dtu.compute.mbse.petrinet.Arc;
+import dk.dtu.compute.mbse.petrinet.Node;
+import dk.dtu.compute.mbse.petrinet.PetrinetFactory;
+import dk.dtu.compute.mbse.petrinet.Place;
+import dk.dtu.compute.mbse.petrinet.Token;
+import dk.dtu.compute.mbse.petrinet.Transition;
+
+public class SimulatorCommandHandler extends AbstractHandler {
+
+	@Override
+	public Object execute(ExecutionEvent event) throws ExecutionException {
+		Transition transition = getTransition(event.getApplicationContext());
+		if (isEnabled(transition)) {
+			fire(transition);
+		}
+		return null;
+	}
+
+	@Override
+	public void setEnabled(Object context) {
+		Transition transition = getTransition(context);
+		setBaseEnabled(isEnabled(transition));
+	}
+	
+	static private Transition getTransition(Object context) {
+		if (context instanceof IEvaluationContext) {
+			IEvaluationContext evaluationContext = (IEvaluationContext) context;
+			Object object = evaluationContext.getDefaultVariable();
+			if (object instanceof List) {
+				@SuppressWarnings("rawtypes")
+				List list = (List) object;
+				if (list.size() == 1) {
+					object = list.get(0);
+					if (object instanceof Transition) {
+						return (Transition) object;
+					}
+				}
+			}
+		}
+		return null;
+	}
+	
+	static private boolean isEnabled(Transition transition) {
+		// TODO compute whether there are enough tokens on
+		//      each input place of a transition; Note that
+		//      there could be more than one arc between the
+		//      same place and the same transition (
+
+		return false;
+	}
+
+	static private void fire(Transition transition) {
+		
+		// TODO create code which fires a transition, i.e.
+		//      removes one token for each incoming arc from
+		//      the target place and adds one token to the
+		//      target place of each outgoing arc.
+		
+		// Note: don't use new Token() or new TokenIml() for
+		//       creating a now token object use the factory
+		//       that was generated from the model. This could
+		//      look like:
+        //
+		// Token token = PetrinetFactory.eINSTANCE.createToken();
+					
+	}
+	
+
+
+
+}
