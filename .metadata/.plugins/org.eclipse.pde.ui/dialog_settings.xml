@@ -3,7 +3,7 @@
 	<section name="PDEFormActionManager">
 	</section>
 	<section name="org.eclipse.pde.ui.PLUGIN_STATUS_DIALOG">
-		<item value="416" key="DIALOG_WIDTH"/>
+		<item value="541" key="DIALOG_WIDTH"/>
 		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
 		<item value="390" key="DIALOG_HEIGHT"/>
 		<item value="140" key="DIALOG_X_ORIGIN"/>
