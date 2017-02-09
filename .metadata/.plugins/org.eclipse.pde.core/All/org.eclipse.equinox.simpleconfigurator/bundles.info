@@ -14,6 +14,7 @@ com.sun.el,2.2.0.v201303151357,file:/E:/Eclipse/eclipse-modeling-neon-2-win32-x8
 dk.dtu.compute.mbse.petrinet,0.1.0.qualifier,file:/E:/Eclipse/02341/dk.dtu.compute.mbse.petrinet/,4,false
 dk.dtu.compute.mbse.petrinet.edit,1.0.0.qualifier,file:/E:/Eclipse/02341/dk.dtu.compute.mbse.petrinet.edit/,4,false
 dk.dtu.compute.mbse.petrinet.editor,1.0.0.qualifier,file:/E:/Eclipse/02341/dk.dtu.compute.mbse.petrinet.editor/,4,false
+dk.dtu.compute.mbse.petrinet.tests,1.0.0.qualifier,file:/E:/Eclipse/02341/dk.dtu.compute.mbse.petrinet.tests/,4,false
 dk.dtu.compute.se.mdsu.tutorial1.simulator,1.0.0.qualifier,file:/E:/Eclipse/02341/dk.dtu.compute.se.mdsu.tutorial1.simulatorX/,4,false
 dk.dtu.imm.se.ecno.core,0.3.0.201210111821,file:/E:/Eclipse/eclipse-modeling-neon-2-win32-x86_64/eclipse/plugins/dk.dtu.imm.se.ecno.core_0.3.0.201210111821.jar,4,false
 dk.dtu.imm.se.ecno.diagram,1.0.0.201210111821,file:/E:/Eclipse/eclipse-modeling-neon-2-win32-x86_64/eclipse/plugins/dk.dtu.imm.se.ecno.diagram_1.0.0.201210111821.jar,4,false

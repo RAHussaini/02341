@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Simulator
+Bundle-SymbolicName: dk.dtu.compute.se.mdsu.tutorial1.simulator;singleton:=true
+Bundle-Version: 1.0.0.qualifier
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Require-Bundle: org.eclipse.core.expressions,
+ org.eclipse.core.commands,
+ dk.dtu.compute.mbse.petrinet;bundle-version="0.1.0",
+ dk.dtu.compute.mbse.petrinet.edit;bundle-version="1.0.0",
+ dk.dtu.compute.mbse.petrinet.editor;bundle-version="1.0.0"

@@ -18,8 +18,8 @@
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference petrinet.ecore#//Node/out"/>
     </genClasses>
     <genClasses ecoreClass="petrinet.ecore#//Arc">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference petrinet.ecore#//Arc/source"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference petrinet.ecore#//Arc/target"/>
+      <genFeatures createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference petrinet.ecore#//Arc/source"/>
+      <genFeatures createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference petrinet.ecore#//Arc/target"/>
     </genClasses>
     <genClasses ecoreClass="petrinet.ecore#//Place">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference petrinet.ecore#//Place/tokens"/>

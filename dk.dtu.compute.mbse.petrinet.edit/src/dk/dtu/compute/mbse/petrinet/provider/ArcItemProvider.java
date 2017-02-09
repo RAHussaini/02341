@@ -3,6 +3,8 @@
 package dk.dtu.compute.mbse.petrinet.provider;
 
 
+import dk.dtu.compute.mbse.petrinet.Arc;
+import dk.dtu.compute.mbse.petrinet.Node;
 import dk.dtu.compute.mbse.petrinet.PetrinetPackage;
 
 import java.util.Collection;
@@ -21,6 +23,7 @@ import org.eclipse.emf.edit.provider.IItemPropertySource;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
+import org.eclipse.emf.edit.provider.ViewerNotification;
 
 /**
  * This is the item provider adapter for a {@link dk.dtu.compute.mbse.petrinet.Arc} object.
@@ -124,9 +127,41 @@ public class ArcItemProvider
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	
+	private String getTextGen(Object object) {
+		return getString("_UI_Arc_type");
+	}
+	
+	
+	/**
+	 * This returns the label text for the adapted class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated NOT
+	 * @author r_hus@dtu.dk
+	 */
 	@Override
 	public String getText(Object object) {
-		return getString("_UI_Arc_type");
+		if (object instanceof Arc){
+			Arc arc = (Arc) object;		
+			String sourceName = null;
+			Node source = arc.getSource();
+			if (source !=null){
+				sourceName=".";
+			}
+			String targetName = null;
+			Node target = arc.getTarget();
+			if(target !=null){
+				targetName = target.getName();
+			}
+			if (targetName==null){
+				targetName= ".";
+			}
+			return getTextGen(object)+ "" + sourceName + "->" + targetName; 
+		}else{
+			return getTextGen(object);
+		}
+		
 	}
 	
 
@@ -140,6 +175,13 @@ public class ArcItemProvider
 	@Override
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
+
+		switch (notification.getFeatureID(Arc.class)) {
+			case PetrinetPackage.ARC__SOURCE:
+			case PetrinetPackage.ARC__TARGET:
+				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
+				return;
+		}
 		super.notifyChanged(notification);
 	}
 

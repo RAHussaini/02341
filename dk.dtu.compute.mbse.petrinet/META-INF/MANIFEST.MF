@@ -13,3 +13,4 @@ Export-Package: dk.dtu.compute.mbse.petrinet,
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf.ecore;visibility:=reexport
 Bundle-ActivationPolicy: lazy
+Import-Package: org.apache.xmlrpc;version="3.1.3"

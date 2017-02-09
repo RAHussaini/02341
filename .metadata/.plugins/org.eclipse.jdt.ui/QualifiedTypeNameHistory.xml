@@ -1,2 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<qualifiedTypeNameHistroy/>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="dk.dtu.compute.mbse.petrinet.Arc"/>
+<fullyQualifiedTypeName name="dk.dtu.compute.mbse.petrinet.Node"/>
+<fullyQualifiedTypeName name="dk.dtu.compute.mbse.petrinet.Transition"/>
+<fullyQualifiedTypeName name="dk.dtu.compute.mbse.petrinet.PetrinetPackage"/>
+<fullyQualifiedTypeName name="org.eclipse.emf.edit.command.RemoveCommand"/>
+<fullyQualifiedTypeName name="dk.dtu.compute.mbse.petrinet.PetrinetFactory"/>
+<fullyQualifiedTypeName name="dk.dtu.compute.mbse.petrinet.Token"/>
+<fullyQualifiedTypeName name="org.eclipse.emf.edit.command.CreateChildCommand"/>
+<fullyQualifiedTypeName name="org.eclipse.emf.edit.domain.AdapterFactoryEditingDomain"/>
+<fullyQualifiedTypeName name="org.eclipse.emf.edit.domain.EditingDomain"/>
+<fullyQualifiedTypeName name="dk.dtu.compute.se.mdsu.tutorial1.commands.FireTransitionCommand"/>
+</qualifiedTypeNameHistroy>

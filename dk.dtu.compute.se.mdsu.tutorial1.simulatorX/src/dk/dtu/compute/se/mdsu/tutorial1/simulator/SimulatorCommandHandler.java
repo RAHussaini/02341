@@ -8,6 +8,8 @@ import org.eclipse.core.commands.AbstractHandler;
 import org.eclipse.core.commands.ExecutionEvent;
 import org.eclipse.core.commands.ExecutionException;
 import org.eclipse.core.expressions.IEvaluationContext;
+import org.eclipse.emf.edit.domain.AdapterFactoryEditingDomain;
+import org.eclipse.emf.edit.domain.EditingDomain;
 
 // TODO replace these imports by your own classes (which
 //      you generated from your model
@@ -17,6 +19,7 @@ import dk.dtu.compute.mbse.petrinet.PetrinetFactory;
 import dk.dtu.compute.mbse.petrinet.Place;
 import dk.dtu.compute.mbse.petrinet.Token;
 import dk.dtu.compute.mbse.petrinet.Transition;
+import dk.dtu.compute.se.mdsu.tutorial1.commands.FireTransitionCommand;
 
 public class SimulatorCommandHandler extends AbstractHandler {
 
@@ -24,6 +27,10 @@ public class SimulatorCommandHandler extends AbstractHandler {
 	public Object execute(ExecutionEvent event) throws ExecutionException {
 		Transition transition = getTransition(event.getApplicationContext());
 		if (isEnabled(transition)) {
+			EditingDomain domain = AdapterFactoryEditingDomain.getEditingDomainFor(transition);
+			if(domain !=null){
+				domain.getCommandStack().execute(new FireTransitionCommand(domain,transition));
+			}
 			fire(transition);
 		}
 		return null;

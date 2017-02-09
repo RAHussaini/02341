@@ -1,0 +1,5 @@
+#Fri Feb 03 22:05:45 CET 2017
+__DEFAULT__=false
+org.eclipse.sdk.Eclipse.master=true
+org.eclipse.help.ui.localSearch.master=true
+expression=Validation
