@@ -8,4 +8,5 @@ Require-Bundle: org.eclipse.core.expressions,
  org.eclipse.core.commands,
  dk.dtu.compute.mbse.petrinet;bundle-version="0.1.0",
  dk.dtu.compute.mbse.petrinet.edit;bundle-version="1.0.0",
- dk.dtu.compute.mbse.petrinet.editor;bundle-version="1.0.0"
+ dk.dtu.compute.mbse.petrinet.editor;bundle-version="1.0.0",
+ org.eclipse.gmf.runtime.diagram.ui;bundle-version="1.8.0"

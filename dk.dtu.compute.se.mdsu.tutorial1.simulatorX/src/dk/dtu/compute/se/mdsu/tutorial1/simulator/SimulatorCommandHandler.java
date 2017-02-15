@@ -10,6 +10,8 @@ import org.eclipse.core.commands.ExecutionException;
 import org.eclipse.core.expressions.IEvaluationContext;
 import org.eclipse.emf.edit.domain.AdapterFactoryEditingDomain;
 import org.eclipse.emf.edit.domain.EditingDomain;
+import org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart;
+import org.eclipse.gmf.runtime.notation.View;
 
 // TODO replace these imports by your own classes (which
 //      you generated from your model
@@ -30,8 +32,9 @@ public class SimulatorCommandHandler extends AbstractHandler {
 			EditingDomain domain = AdapterFactoryEditingDomain.getEditingDomainFor(transition);
 			if(domain !=null){
 				domain.getCommandStack().execute(new FireTransitionCommand(domain,transition));
-			}
+			}else {  /**** change made ****/
 			fire(transition);
+			}
 		}
 		return null;
 	}
@@ -53,6 +56,17 @@ public class SimulatorCommandHandler extends AbstractHandler {
 					object = list.get(0);
 					if (object instanceof Transition) {
 						return (Transition) object;
+					}else if(object instanceof IGraphicalEditPart){
+						IGraphicalEditPart editPart = (IGraphicalEditPart) object;
+						Object model = editPart.getModel();
+						if (model instanceof View){
+							Object element = ((View) model).getElement();
+							if (element instanceof Transition){
+								return (Transition) element;
+							}
+							
+						}
+						
 					}
 				}
 			}

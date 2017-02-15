@@ -18,6 +18,7 @@ import dk.dtu.compute.mbse.petrinet.Transition;
 
 public class FireTransitionCommand extends CompoundCommand {
 	public FireTransitionCommand(EditingDomain domain, Transition transition){
+		//super("Fire T");
 		
 		// compute the number of tokens needed for each place for firing
 		// the given transition and check whether the place has that many tokens
@@ -31,10 +32,10 @@ public class FireTransitionCommand extends CompoundCommand {
 			}
 		}
 		
-		//add commands for removind the needed number of token from each place
+		//add commands for removing the needed number of token from each place
 		
 		for (Place place:needed.keySet()){
-			for(int i=0; i<needed.get(place)&& i<place.getTokens().size(); i++)
+			for(int i= 0; i<needed.get(place) && i <place.getTokens().size(); i++)
 				this.append(new RemoveCommand(domain, place, PetrinetPackage.eINSTANCE.getPlace_Tokens(),place.getTokens().get(i)));
 		}
 		// add commands for adding a token to each target place of each output arc
@@ -46,6 +47,11 @@ public class FireTransitionCommand extends CompoundCommand {
 				this.append(new CreateChildCommand(domain, place, PetrinetPackage.eINSTANCE.getPlace_Tokens(), token, null));
 			}
 		}
+	}
+	
+	// undo/redo label
+	public java.lang.String getLabel(){
+		return "Fire Transition";
 	}
 }
 

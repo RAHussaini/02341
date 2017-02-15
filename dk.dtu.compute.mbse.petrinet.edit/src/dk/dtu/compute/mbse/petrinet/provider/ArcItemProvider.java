@@ -146,18 +146,22 @@ public class ArcItemProvider
 			Arc arc = (Arc) object;		
 			String sourceName = null;
 			Node source = arc.getSource();
-			if (source !=null){
+			if(source !=null){
+				sourceName = source.getName();
+			}
+			if (sourceName == null){
 				sourceName=".";
 			}
+			
 			String targetName = null;
 			Node target = arc.getTarget();
 			if(target !=null){
 				targetName = target.getName();
 			}
-			if (targetName==null){
+			if (targetName == null){
 				targetName= ".";
 			}
-			return getTextGen(object)+ "" + sourceName + "->" + targetName; 
+			return getTextGen(object)+ " " + sourceName + " -> " + targetName; 
 		}else{
 			return getTextGen(object);
 		}

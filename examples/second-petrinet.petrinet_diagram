@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<notation:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmlns:pn="http://mbse.compute.dtu.dk/petrinet" xmi:id="_rE6bMPL5Eean2bTwi9D6ew" type="Petrinet" name="second-petrinet.petrinet_diagram" measurementUnit="Pixel">
+  <children xmi:type="notation:Shape" xmi:id="_5ZCqUPMIEeasL6lcPRLh7A" type="2001" fontName="Segoe UI">
+    <children xmi:type="notation:DecorationNode" xmi:id="_5ZEfgPMIEeasL6lcPRLh7A" type="5001"/>
+    <element xmi:type="pn:Place" href="second-petrinet.petrinet#//@nodes.0"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_5ZCqUfMIEeasL6lcPRLh7A" x="15" y="30"/>
+  </children>
+  <children xmi:type="notation:Shape" xmi:id="_5ZEfgfMIEeasL6lcPRLh7A" type="2002" fontName="Segoe UI">
+    <children xmi:type="notation:DecorationNode" xmi:id="_5ZFGkPMIEeasL6lcPRLh7A" type="5002"/>
+    <element xmi:type="pn:Transition" href="second-petrinet.petrinet#//@nodes.1"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_5ZEfgvMIEeasL6lcPRLh7A" x="80" y="85"/>
+  </children>
+  <children xmi:type="notation:Shape" xmi:id="_5ZFGkfMIEeasL6lcPRLh7A" type="2001" fontName="Segoe UI">
+    <children xmi:type="notation:DecorationNode" xmi:id="_5ZFtoPMIEeasL6lcPRLh7A" type="5001"/>
+    <element xmi:type="pn:Place" href="second-petrinet.petrinet#//@nodes.2"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_5ZFGkvMIEeasL6lcPRLh7A" x="55" y="200"/>
+  </children>
+  <children xmi:type="notation:Shape" xmi:id="_fWzk8PNfEeaV0cg0YqL87w" type="2001" fontName="Segoe UI">
+    <children xmi:type="notation:DecorationNode" xmi:id="_fWzk8vNfEeaV0cg0YqL87w" type="5001"/>
+    <element xmi:type="pn:Place" href="second-petrinet.petrinet#//@nodes.3"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_fWzk8fNfEeaV0cg0YqL87w" x="139" y="173"/>
+  </children>
+  <styles xmi:type="notation:DiagramStyle" xmi:id="_rE6bMfL5Eean2bTwi9D6ew"/>
+  <element xmi:type="pn:Petrinet" href="second-petrinet.petrinet#/"/>
+  <edges xmi:type="notation:Connector" xmi:id="_LB4lIPNdEeaV0cg0YqL87w" type="4001" source="_5ZCqUPMIEeasL6lcPRLh7A" target="_5ZEfgfMIEeasL6lcPRLh7A">
+    <styles xmi:type="notation:FontStyle" xmi:id="_LB4lIfNdEeaV0cg0YqL87w" fontName="Segoe UI"/>
+    <element xmi:type="pn:Arc" href="second-petrinet.petrinet#//@arcs.0"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_LB4lIvNdEeaV0cg0YqL87w" points="[0, 0, 0, 0]$[0, 0, 0, 0]"/>
+  </edges>
+  <edges xmi:type="notation:Connector" xmi:id="_LDLloPNdEeaV0cg0YqL87w" type="4001" source="_5ZEfgfMIEeasL6lcPRLh7A" target="_5ZFGkfMIEeasL6lcPRLh7A">
+    <styles xmi:type="notation:FontStyle" xmi:id="_LDLlofNdEeaV0cg0YqL87w" fontName="Segoe UI"/>
+    <element xmi:type="pn:Arc" href="second-petrinet.petrinet#//@arcs.1"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_LDLlovNdEeaV0cg0YqL87w" points="[0, 0, 0, 0]$[0, 0, 0, 0]"/>
+  </edges>
+  <edges xmi:type="notation:Connector" xmi:id="_g6BEIPNfEeaV0cg0YqL87w" type="4001" source="_5ZEfgfMIEeasL6lcPRLh7A" target="_fWzk8PNfEeaV0cg0YqL87w">
+    <styles xmi:type="notation:FontStyle" xmi:id="_g6BEIfNfEeaV0cg0YqL87w" fontName="Segoe UI"/>
+    <element xmi:type="pn:Arc" href="second-petrinet.petrinet#//@arcs.2"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_g6BEIvNfEeaV0cg0YqL87w" points="[0, 0, -55, -68]$[64, 48, 9, -20]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_g6K1IPNfEeaV0cg0YqL87w" id="(0.6,1.0)"/>
+  </edges>
+</notation:Diagram>
